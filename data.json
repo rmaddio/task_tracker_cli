@@ -1,32 +1,20 @@
 {
+    "1": {
+        "description": "Wash the car",
+        "status": "todo",
+        "created_at": "2025-08-09",
+        "updated_at": "None"
+    },
+    "2": {
+        "description": "Read a chapter of a book",
+        "status": "todo",
+        "created_at": "2025-08-09",
+        "updated_at": "None"
+    },
     "3": {
-        "description": "Find a new local coffee shop or restaurant",
-        "status": "in-progress",
-        "created_at": "2025-08-07",
-        "updated_at": "2025-08-07"
-    },
-    "4": {
-        "description": "Buy groceries and cook dinner",
-        "status": "done",
-        "created_at": "2025-08-07",
-        "updated_at": "2025-08-07"
-    },
-    "5": {
-        "description": "Write a short story or poem",
+        "description": "Clean a room",
         "status": "todo",
-        "created_at": "2025-08-07",
-        "updated_at": "None"
-    },
-    "6": {
-        "description": "Try a new type of exercise or workout",
-        "status": "todo",
-        "created_at": "2025-08-07",
-        "updated_at": "None"
-    },
-    "7": {
-        "description": "Go for a walk or hike in a new park or trail",
-        "status": "todo",
-        "created_at": "2025-08-07",
+        "created_at": "2025-08-09",
         "updated_at": "None"
     }
 }

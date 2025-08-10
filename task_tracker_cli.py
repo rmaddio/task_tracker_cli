@@ -22,12 +22,12 @@ def main():
            sys.exit()
 
         elif option == 'add':
-            task = ' '.join(entry_list)
+            task = ' '.join(entry_list).capitalize()
             add_task(task)
 
         elif option == 'update':
             id = entry_list.pop(0)
-            task = ' '.join(entry_list)
+            task = ' '.join(entry_list).capitalize()
             update_task(id, task)
 
         elif option == 'delete':
@@ -48,13 +48,15 @@ def main():
             print(f'{RED}Command not found{RESET}')
 
 def add_task(task: str):
-    with open("data.json", "r") as file:
-        loaded_data = json.load(file)
-
-    keys = list(loaded_data.keys())
-    keys = sorted(keys)
-
-    id = int(keys[-1]) + 1
+    try:
+        with open("data.json", "r") as file:
+            loaded_data = json.load(file)
+            keys = list(loaded_data.keys())
+            keys = sorted(keys)
+            id = int(keys[-1]) + 1
+    except:
+        loaded_data = {}
+        id = 1
 
     loaded_data[str(id)] = {"description": task,
                             "status": "todo",
@@ -86,7 +88,7 @@ def delete_task(id: str):
     with open("data.json", "w") as file:
         json.dump(loaded_data, file, indent=4)
     
-    print(f"{RED}Task deletdeed successfully{RESET}")
+    print(f"{RED}Task deleted successfully{RESET}")
 
 def set_status(status: str, id: str):
     # Marking a task as in progress or done
